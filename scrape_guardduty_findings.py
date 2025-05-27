@@ -76,7 +76,7 @@ def scrape_findings():
         f_type = cells[idx_map['type']].get_text(strip=True)
         resource_type = cells[idx_map['resource_type']].get_text(strip=True)
         source = cells[idx_map['source']].get_text(strip=True)
-        severity = cells[idx_map['severity']].get_text(strip=True) # Remove any + or * at the end of the string. AI!
+        severity = cells[idx_map['severity']].get_text(strip=True).rstrip('+*')
         services = determine_services(f_type, resource_type, source)
         finding = {
             'type': f_type,
