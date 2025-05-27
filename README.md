@@ -1,4 +1,4 @@
-# aws-guardduty-finding-directory
+# aws-guardduty-findings-directory
 Regularly-updated directory of all finding types available in Amazon GuardDuty, sourced from AWS documentation
 
 ## Automation
