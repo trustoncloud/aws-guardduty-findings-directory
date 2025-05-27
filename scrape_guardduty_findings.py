@@ -1,12 +1,14 @@
 import json
-import sys
 import requests
 from bs4 import BeautifulSoup
 
+URL = "https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html"
 
-def determine_services(finding_type: str, resource_type: str, source: str) -> list:
-    """Return a sorted list of AWS services inferred from a finding."""
-    text = f"{finding_type} {resource_type} {source}".lower()
+OUTPUT_FILE = "findings.json"
+
+def determine_services(find_type: str, resource_type: str, source: str) -> list[str]:
+    """Infer AWS services from finding fields."""
+    text = " ".join([find_type, resource_type, source]).lower()
     services = set()
     if "iam" in text:
         services.add("iam")
@@ -22,15 +24,9 @@ def determine_services(finding_type: str, resource_type: str, source: str) -> li
         services.add("lambda")
     if "rds" in text:
         services.add("rds")
-
     if not services:
-        raise ValueError(f"Could not determine services for finding: {finding_type}")
-
+        raise ValueError(f"Could not determine services for finding '{find_type}'")
     return sorted(services)
-
-URL = "https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html"
-
-OUTPUT_FILE = "findings.json"
 
 def scrape_findings():
     response = requests.get(URL, timeout=30)
@@ -44,7 +40,10 @@ def scrape_findings():
     target_table = None
     for table in tables:
         headers = [th.get_text(strip=True).lower() for th in table.find_all('th')]
-        if {'finding type', 'resource type', 'source', 'severity'}.issubset(set(headers)):
+        def has_header(keyword: str) -> bool:
+            return any(keyword in h for h in headers)
+        if all(has_header(k) for k in ["finding type", "resource type", "source", "severity"]):
+
             target_table = table
             break
 
@@ -53,11 +52,18 @@ def scrape_findings():
 
     # Parse rows
     header_cells = [th.get_text(strip=True).lower() for th in target_table.find('tr').find_all('th')]
+    def find_idx(keyword: str) -> int:
+        for i, text in enumerate(header_cells):
+            if keyword in text:
+                return i
+        raise ValueError(f"Missing expected column '{keyword}'")
+
     idx_map = {
-        'type': header_cells.index('finding type'),
-        'resource_type': header_cells.index('resource type'),
-        'source': header_cells.index('source'),
-        'severity': header_cells.index('severity'),
+        'type': find_idx('finding type'),
+        'resource_type': find_idx('resource type'),
+        'source': find_idx('source'),
+        'severity': find_idx('severity'),
+
     }
 
     for row in target_table.find_all('tr')[1:]:

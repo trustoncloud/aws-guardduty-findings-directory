@@ -5,8 +5,6 @@ Regularly-updated directory of all finding types available in Amazon GuardDuty, 
 
 This repository includes a GitHub Actions workflow that scrapes the AWS GuardDuty documentation for the list of active finding types. The workflow runs weekly and updates [`findings.json`](findings.json) with the latest information.
 
-If the scraper cannot infer which AWS services a finding relates to, it exits with an error so that the workflow fails and notifies repository owners.
-
 To execute the scraper locally:
 
 ```bash
@@ -24,8 +22,10 @@ The output JSON has the following structure:
       "resource_type": "Resource",
       "source": "Source",
       "severity": "Severity",
-      "services": ["example"]
+      "services": ["ecs", "eks"]
     }
   ]
 }
 ```
+
+If a finding's type, resource type or source doesn't map to any AWS service, the scraper exits with an error so the workflow fails.
