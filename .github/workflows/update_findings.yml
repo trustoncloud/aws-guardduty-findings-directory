@@ -1,0 +1,29 @@
+name: Update GuardDuty Findings
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - run: pip install -r requirements.txt
+      - run: python scrape_guardduty_findings.py
+      - name: Commit changes
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "github-actions"
+          git add findings.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update GuardDuty findings"
+            git push
+          fi
