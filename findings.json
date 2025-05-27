@@ -1,1 +1,1775 @@
-{"findings": []}
+{
+  "findings": [
+    {
+      "type": "Discovery:S3/AnomalousBehavior",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Low",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Discovery:S3/MaliciousIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Discovery:S3/MaliciousIPCaller.Custom",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Discovery:S3/TorIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Exfiltration:S3/AnomalousBehavior",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Exfiltration:S3/MaliciousIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/AnomalousBehavior.Delete",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/AnomalousBehavior.Permission",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/AnomalousBehavior.Write",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/MaliciousIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PenTest:S3/KaliLinux",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PenTest:S3/ParrotLinux",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PenTest:S3/PentooLinux",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:S3/TorIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:S3/MaliciousIPCaller.Custom",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "CredentialAccess:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Discovery:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Low",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Exfiltration:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "High",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Impact:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "High",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "InitialAccess:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "PenTest:IAMUser/KaliLinux",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "PenTest:IAMUser/ParrotLinux",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "PenTest:IAMUser/PentooLinux",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Persistence:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Stealth:IAMUser/PasswordPolicyChange",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Low",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "High",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Policy:S3/AccountBlockPublicAccessDisabled",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail management events",
+      "severity": "Low",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Policy:S3/BucketAnonymousAccessGranted",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail management events",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Policy:S3/BucketBlockPublicAccessDisabled",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail management events",
+      "severity": "Low",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Policy:S3/BucketPublicAccessGranted",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail management events",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Recon:IAMUser/MaliciousIPCaller",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Recon:IAMUser/MaliciousIPCaller.Custom",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Recon:IAMUser/TorIPCaller",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Stealth:IAMUser/CloudTrailLoggingDisabled",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Low",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Stealth:S3/ServerAccessLoggingDisabled",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail management events",
+      "severity": "Low",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:IAMUser/MaliciousIPCaller",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:IAMUser/TorIPCaller",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Policy:IAMUser/RootCredentialUsage",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "Low",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
+      "type": "Policy:IAMUser/ShortTermRootCredentialUsage",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "Low",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
+      "type": "AttackSequence:IAM/CompromisedCredentials",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "CloudTrail management events",
+      "severity": "Critical",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "AttackSequence:S3/CompromisedData",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "CloudTrail management events and CloudTrail data events for S3",
+      "severity": "Critical",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/C&CActivity.B!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "CryptoCurrency:EC2/BitcoinTool.B!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/AbusedDomainRequest.Reputation",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/BitcoinDomainRequest.Reputation",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/MaliciousDomainRequest.Reputation",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/SuspiciousDomainRequest.Reputation",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/BlackholeTraffic!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DGADomainRequest.B",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DGADomainRequest.C!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DNSDataExfiltration",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DriveBySourceTraffic!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DropPoint!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/PhishingDomainRequest!DNS",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/MetadataDNSRebind",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:Container/MaliciousFile",
+      "resource_type": "Container",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Container/SuspiciousFile",
+      "resource_type": "Container",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile",
+      "resource_type": "Amazon EC2",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/SuspiciousFile",
+      "resource_type": "Amazon EC2",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:ECS/MaliciousFile",
+      "resource_type": "ECS",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:ECS/SuspiciousFile",
+      "resource_type": "ECS",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/MaliciousFile",
+      "resource_type": "Kubernetes",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/SuspiciousFile",
+      "resource_type": "Kubernetes",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "CredentialAccess:Kubernetes/AnomalousBehavior.SecretsAccessed",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "CredentialAccess:Kubernetes/MaliciousIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "CredentialAccess:Kubernetes/MaliciousIPCaller.Custom",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "CredentialAccess:Kubernetes/SuccessfulAnonymousAccess",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "CredentialAccess:Kubernetes/TorIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Kubernetes/MaliciousIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Kubernetes/MaliciousIPCaller.Custom",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Kubernetes/SuccessfulAnonymousAccess",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Kubernetes/TorIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Discovery:Kubernetes/AnomalousBehavior.PermissionChecked",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Low",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Discovery:Kubernetes/MaliciousIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Discovery:Kubernetes/MaliciousIPCaller.Custom",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Discovery:Kubernetes/SuccessfulAnonymousAccess",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Discovery:Kubernetes/TorIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/ExecInKubeSystemPod",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/AnomalousBehavior.ExecInPod",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/AnomalousBehavior.WorkloadDeployed",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Low",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Kubernetes/MaliciousIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Kubernetes/MaliciousIPCaller.Custom",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Kubernetes/SuccessfulAnonymousAccess",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Kubernetes/TorIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Kubernetes/ContainerWithSensitiveMount",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Kubernetes/MaliciousIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Kubernetes/MaliciousIPCaller.Custom",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Kubernetes/SuccessfulAnonymousAccess",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Kubernetes/TorIPCaller",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Policy:Kubernetes/AdminAccessToDefaultServiceAccount",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Policy:Kubernetes/AnonymousAccessGranted",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Policy:Kubernetes/KubeflowDashboardExposed",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Policy:Kubernetes/ExposedDashboard",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Kubernetes/AnomalousBehavior.RoleBindingCreated",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Kubernetes/AnomalousBehavior.RoleCreated",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Low",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Kubernetes/AnomalousBehavior.WorkloadDeployed!ContainerWithSensitiveMount",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Kubernetes/AnomalousBehavior.WorkloadDeployed!PrivilegedContainer",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Kubernetes/PrivilegedContainer",
+      "resource_type": "Kubernetes",
+      "source": "EKS audit logs",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Backdoor:Lambda/C&CActivity.B",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "CryptoCurrency:Lambda/BitcoinTool.B",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "Trojan:Lambda/BlackholeTraffic",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "Trojan:Lambda/DropPoint",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:Lambda/MaliciousIPCaller.Custom",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:Lambda/TorClient",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:Lambda/TorRelay",
+      "resource_type": "Lambda",
+      "source": "Lambda Network Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "lambda"
+      ]
+    },
+    {
+      "type": "Object:S3/MaliciousFile",
+      "resource_type": "S3Object",
+      "source": "Malware Protection for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/AnomalousBehavior.FailedLogin",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "Low",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/AnomalousBehavior.SuccessfulBruteForce",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/AnomalousBehavior.SuccessfulLogin",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "Variable",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/MaliciousIPCaller.FailedLogin",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/MaliciousIPCaller.SuccessfulLogin",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/TorIPCaller.FailedLogin",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "CredentialAccess:RDS/TorIPCaller.SuccessfulLogin",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "High",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "Discovery:RDS/MaliciousIPCaller",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "Discovery:RDS/TorIPCaller",
+      "resource_type": "Supported Amazon Aurora, Amazon RDS, and Aurora Limitless databases",
+      "source": "RDS Login Activity Monitoring",
+      "severity": "Medium",
+      "services": [
+        "rds"
+      ]
+    },
+    {
+      "type": "Backdoor:Runtime/C&CActivity.B",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Backdoor:Runtime/C&CActivity.B!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "CryptoCurrency:Runtime/BitcoinTool.B",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "CryptoCurrency:Runtime/BitcoinTool.B!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/FilelessExecution",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/ProcessInjection.Proc",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/ProcessInjection.Ptrace",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/ProcessInjection.VirtualMemoryWrite",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/PtraceAntiDebugging",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Low",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/SuspiciousCommand",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Discovery:Runtime/SuspiciousCommand",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Low",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/MaliciousFileExecuted",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/NewBinaryExecuted",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/NewLibraryLoaded",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/SuspiciousCommand",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Variable",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/SuspiciousShellCreated",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Low",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/SuspiciousTool",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Variable",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Runtime/ReverseShell",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Runtime/AbusedDomainRequest.Reputation",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Runtime/BitcoinDomainRequest.Reputation",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Runtime/CryptoMinerExecuted",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Runtime/MaliciousDomainRequest.Reputation",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Impact:Runtime/SuspiciousDomainRequest.Reputation",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Low",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Persistence:Runtime/SuspiciousCommand",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/CGroupsReleaseAgentModified",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/ContainerMountsHostDirectory",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/DockerSocketAccessed",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/ElevationToRoot",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/RuncContainerEscape",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/SuspiciousCommand",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/UserfaultfdUsage",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/BlackholeTraffic",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/BlackholeTraffic!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/DropPoint",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/DGADomainRequest.C!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/DriveBySourceTraffic!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/DropPoint!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Trojan:Runtime/PhishingDomainRequest!DNS",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:Runtime/MetadataDNSRebind",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:Runtime/TorClient",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:Runtime/TorRelay",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/C&CActivity.B",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.Dns",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.Tcp",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.Udp",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.UdpOnTcpPorts",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.UnusualProtocol",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/Spambot",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Behavior:EC2/NetworkPortUnusual",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Behavior:EC2/TrafficVolumeUnusual",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "CryptoCurrency:EC2/BitcoinTool.B",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:EC2/UnusualDNSResolver",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:EC2/UnusualDoHActivity",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:EC2/UnusualDoTActivity",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/PortSweep",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/WinRMBruteForce",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Recon:EC2/PortProbeEMRUnprotectedPort",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Recon:EC2/PortProbeUnprotectedPort",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Recon:EC2/Portscan",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/BlackholeTraffic",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DropPoint",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/RDPBruteForce",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/SSHBruteForce",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/TorClient",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/TorRelay",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    }
+  ]
+}
