@@ -75,7 +75,10 @@ def scrape_findings():
             continue
         f_type = cells[idx_map['type']].get_text(strip=True)
         resource_type = cells[idx_map['resource_type']].get_text(strip=True)
-        source = cells[idx_map['source']].get_text(strip=True).replace('\n', ' ').replace('\r', '').rstrip('+*').strip()
+        import re
+        source = cells[idx_map['source']].get_text(strip=True)
+        source = source.replace('\n', ' ').replace('\r', '').rstrip('+*').strip()
+        source = re.sub(r'\s+', ' ', source)
         severity = cells[idx_map['severity']].get_text(strip=True).rstrip('+*')
         services = determine_services(f_type, resource_type, source)
         finding = {
