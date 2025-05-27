@@ -1,4 +1,5 @@
 import json
+import sys
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,6 +16,8 @@ def determine_services(find_type: str, resource_type: str, source: str) -> list[
     if "s3" in text:
         services.add("s3")
     if "ec2" in text:
+        services.add("ec2")
+    if "ecs" in text:
         services.add("ec2")
     if "container" in text:
         services.update(["ec2", "ecs", "eks"])
@@ -42,7 +45,7 @@ def scrape_findings():
         headers = [th.get_text(strip=True).lower() for th in table.find_all('th')]
         def has_header(keyword: str) -> bool:
             return any(keyword in h for h in headers)
-        if all(has_header(k) for k in ["finding type", "resource type", "source", "severity"]):
+        if all(has_header(k) for k in ["finding type", "resource type", "foundational data source/feature", "severity"]):
 
             target_table = table
             break
@@ -61,7 +64,7 @@ def scrape_findings():
     idx_map = {
         'type': find_idx('finding type'),
         'resource_type': find_idx('resource type'),
-        'source': find_idx('source'),
+        'source': find_idx('foundational data source/feature'),
         'severity': find_idx('severity'),
 
     }
@@ -73,7 +76,7 @@ def scrape_findings():
         f_type = cells[idx_map['type']].get_text(strip=True)
         resource_type = cells[idx_map['resource_type']].get_text(strip=True)
         source = cells[idx_map['source']].get_text(strip=True)
-        severity = cells[idx_map['severity']].get_text(strip=True)
+        severity = cells[idx_map['severity']].get_text(strip=True) # Remove any + or * at the end of the string. AI!
         services = determine_services(f_type, resource_type, source)
         finding = {
             'type': f_type,
@@ -82,8 +85,10 @@ def scrape_findings():
             'severity': severity,
             'services': services,
         }
+        print(finding)
         findings.append(finding)
 
+    exit(0)
     return findings
 
 
