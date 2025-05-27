@@ -28,5 +28,4 @@ The output JSON has the following structure:
 }
 ```
 
-If a finding's type, resource type or source doesn't map to any AWS service,
-the scraper exits with an error so the workflow fails.
+If a finding's type, resource type or source doesn't map to any AWS service, the scraper exits with an error so the workflow fails.

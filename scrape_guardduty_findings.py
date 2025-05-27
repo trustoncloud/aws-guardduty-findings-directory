@@ -1,5 +1,4 @@
 import json
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,7 +28,6 @@ def determine_services(find_type: str, resource_type: str, source: str) -> list[
         raise ValueError(f"Could not determine services for finding '{find_type}'")
     return sorted(services)
 
-
 def scrape_findings():
     response = requests.get(URL, timeout=30)
     response.raise_for_status()
@@ -45,6 +43,7 @@ def scrape_findings():
         def has_header(keyword: str) -> bool:
             return any(keyword in h for h in headers)
         if all(has_header(k) for k in ["finding type", "resource type", "source", "severity"]):
+
             target_table = table
             break
 
@@ -53,7 +52,6 @@ def scrape_findings():
 
     # Parse rows
     header_cells = [th.get_text(strip=True).lower() for th in target_table.find('tr').find_all('th')]
-
     def find_idx(keyword: str) -> int:
         for i, text in enumerate(header_cells):
             if keyword in text:
@@ -65,6 +63,7 @@ def scrape_findings():
         'resource_type': find_idx('resource type'),
         'source': find_idx('source'),
         'severity': find_idx('severity'),
+
     }
 
     for row in target_table.find_all('tr')[1:]:
@@ -89,7 +88,11 @@ def scrape_findings():
 
 
 def main():
-    data = {'findings': scrape_findings()}
+    try:
+        data = {'findings': scrape_findings()}
+    except Exception as exc:  # pragma: no cover - simple error handler
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(data, f, indent=2)
 
