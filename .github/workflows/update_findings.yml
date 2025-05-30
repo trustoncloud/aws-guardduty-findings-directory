@@ -2,7 +2,7 @@ name: Update GuardDuty Findings
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * *'
 
 jobs:
   scrape:
