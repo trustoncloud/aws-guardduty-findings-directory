@@ -400,6 +400,16 @@
       ]
     },
     {
+      "type": "AttackSequence:EKS/CompromisedCluster",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "EKS audit log eventsRuntime Monitoring for Amazon EKSAmazon EKS malware detection for Amazon EC2AWS CloudTrail data events for S3AWS CloudTrail management eventsVPC Flow LogsRoute53 Resolver DNS query logs",
+      "severity": "Critical",
+      "services": [
+        "ec2",
+        "s3"
+      ]
+    },
+    {
       "type": "AttackSequence:IAM/CompromisedCredentials",
       "resource_type": "Resources involved in attack sequence",
       "source": "CloudTrail management events",
