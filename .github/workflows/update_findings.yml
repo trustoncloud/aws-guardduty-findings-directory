@@ -10,13 +10,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
       - run: pip install -r requirements.txt
       - run: python scrape_guardduty_findings.py
       - name: Commit changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "github-actions"
@@ -25,5 +27,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update GuardDuty findings"
-            git push
+            git push "https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
           fi
