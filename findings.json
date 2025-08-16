@@ -55,6 +55,15 @@
       ]
     },
     {
+      "type": "Impact:EC2/MaliciousDomainRequest.Custom",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
       "type": "Impact:S3/AnomalousBehavior.Delete",
       "resource_type": "Amazon S3",
       "source": "CloudTrail data events for S3",
