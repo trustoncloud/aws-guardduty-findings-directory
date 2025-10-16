@@ -1170,6 +1170,17 @@
       ]
     },
     {
+      "type": "",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
       "type": "DefenseEvasion:Runtime/ProcessInjection.Proc",
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
