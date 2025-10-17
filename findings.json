@@ -1170,7 +1170,7 @@
       ]
     },
     {
-      "type": "",
+      "type": "DefenseEvasion:Runtime/KernelModuleLoaded",
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
       "severity": "High",
