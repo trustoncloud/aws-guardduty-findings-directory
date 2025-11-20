@@ -639,6 +639,42 @@
       ]
     },
     {
+      "type": "Execution:EC2/MaliciousFile!Snapshot",
+      "resource_type": "Amazon EBS",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!AMI",
+      "resource_type": "Amazon EC2",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!RecoveryPoint",
+      "resource_type": "AWS Backup",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:S3/MaliciousFile!RecoveryPoint",
+      "resource_type": "AWS Backup",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "s3"
+      ]
+    },
+    {
       "type": "CredentialAccess:Kubernetes/AnomalousBehavior.SecretsAccessed",
       "resource_type": "Kubernetes",
       "source": "EKS audit logs",
