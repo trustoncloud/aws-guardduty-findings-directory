@@ -163,6 +163,15 @@
       ]
     },
     {
+      "type": "DefenseEvasion:IAMUser/BedrockLoggingDisabled",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
       "type": "Discovery:IAMUser/AnomalousBehavior",
       "resource_type": "IAM",
       "source": "CloudTrail management events",
