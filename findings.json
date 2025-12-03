@@ -446,6 +446,24 @@
       ]
     },
     {
+      "type": "AttackSequence:ECS/CompromisedCluster",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "AWS Amazon ECS Runtime detections (Fargate)AWS Amazon ECS Runtime detections (Amazon EC2 Instances)AWS Malware detections",
+      "severity": "Critical",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "AttackSequence:EC2/CompromisedInstanceGroup",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "AWS Amazon EC2 Runtime detectionsAWS Malware detectionsVPC Flow LogsRoute53 Resolver DNS query logs",
+      "severity": "Critical",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
       "type": "Backdoor:EC2/C&CActivity.B!DNS",
       "resource_type": "Amazon EC2",
       "source": "DNS logs",
