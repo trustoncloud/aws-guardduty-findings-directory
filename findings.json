@@ -418,6 +418,16 @@
       ]
     },
     {
+      "type": "UnauthorizedAccess:IAMUser/ResourceCredentialExfiltration.OutsideAWS",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
       "type": "AttackSequence:EKS/CompromisedCluster",
       "resource_type": "Resources involved in attack sequence",
       "source": "EKS audit log eventsRuntime Monitoring for Amazon EKSAmazon EKS malware detection for Amazon EC2AWS CloudTrail data events for S3AWS CloudTrail management eventsVPC Flow LogsRoute53 Resolver DNS query logs",
