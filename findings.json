@@ -55,6 +55,15 @@
       ]
     },
     {
+      "type": "Impact:EC2/MaliciousDomainRequest.Custom",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
       "type": "Impact:S3/AnomalousBehavior.Delete",
       "resource_type": "Amazon S3",
       "source": "CloudTrail data events for S3",
@@ -146,6 +155,15 @@
     },
     {
       "type": "DefenseEvasion:IAMUser/AnomalousBehavior",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "Medium",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:IAMUser/BedrockLoggingDisabled",
       "resource_type": "IAM",
       "source": "CloudTrail management events",
       "severity": "Medium",
@@ -400,6 +418,16 @@
       ]
     },
     {
+      "type": "UnauthorizedAccess:IAMUser/ResourceCredentialExfiltration.OutsideAWS",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
       "type": "AttackSequence:EKS/CompromisedCluster",
       "resource_type": "Resources involved in attack sequence",
       "source": "EKS audit log eventsRuntime Monitoring for Amazon EKSAmazon EKS malware detection for Amazon EC2AWS CloudTrail data events for S3AWS CloudTrail management eventsVPC Flow LogsRoute53 Resolver DNS query logs",
@@ -425,6 +453,24 @@
       "severity": "Critical",
       "services": [
         "s3"
+      ]
+    },
+    {
+      "type": "AttackSequence:ECS/CompromisedCluster",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "AWS Amazon ECS Runtime detections (Fargate)AWS Amazon ECS Runtime detections (Amazon EC2 Instances)AWS Malware detections",
+      "severity": "Critical",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "AttackSequence:EC2/CompromisedInstanceGroup",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "AWS Amazon EC2 Runtime detectionsAWS Malware detectionsVPC Flow LogsRoute53 Resolver DNS query logs",
+      "severity": "Critical",
+      "services": [
+        "ec2"
       ]
     },
     {
@@ -627,6 +673,42 @@
       "severity": "Varies depending on the detected threat",
       "services": [
         "eks"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!Snapshot",
+      "resource_type": "Amazon EBS",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!AMI",
+      "resource_type": "Amazon EC2",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!RecoveryPoint",
+      "resource_type": "AWS Backup",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:S3/MaliciousFile!RecoveryPoint",
+      "resource_type": "AWS Backup",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "s3"
       ]
     },
     {
@@ -1154,6 +1236,17 @@
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
       "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:Runtime/KernelModuleLoaded",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
       "services": [
         "ec2",
         "ecs",
