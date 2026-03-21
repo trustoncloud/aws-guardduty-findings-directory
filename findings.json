@@ -154,6 +154,16 @@
       ]
     },
     {
+      "type": "CredentialAccess:IAMUser/CompromisedCredentials",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
       "type": "DefenseEvasion:IAMUser/AnomalousBehavior",
       "resource_type": "IAM",
       "source": "CloudTrail management events",
