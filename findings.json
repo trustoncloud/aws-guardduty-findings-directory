@@ -1341,6 +1341,17 @@
       ]
     },
     {
+      "type": "Execution:Runtime/MaliciousFileExecuted.Custom",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "High",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
       "type": "Execution:Runtime/NewBinaryExecuted",
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
