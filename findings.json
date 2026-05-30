@@ -911,17 +911,6 @@
       ]
     },
     {
-      "type": "Persistence:Kubernetes/ContainerWithSensitiveMount",
-      "resource_type": "Kubernetes",
-      "source": "EKS audit logs",
-      "severity": "Medium",
-      "services": [
-        "ec2",
-        "ecs",
-        "eks"
-      ]
-    },
-    {
       "type": "Persistence:Kubernetes/MaliciousIPCaller",
       "resource_type": "Kubernetes",
       "source": "EKS audit logs",
@@ -1027,17 +1016,6 @@
       "resource_type": "Kubernetes",
       "source": "EKS audit logs",
       "severity": "High",
-      "services": [
-        "ec2",
-        "ecs",
-        "eks"
-      ]
-    },
-    {
-      "type": "PrivilegeEscalation:Kubernetes/PrivilegedContainer",
-      "resource_type": "Kubernetes",
-      "source": "EKS audit logs",
-      "severity": "Medium",
       "services": [
         "ec2",
         "ecs",
