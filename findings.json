@@ -1242,6 +1242,17 @@
       ]
     },
     {
+      "type": "DefenseEvasion:Runtime/SensitiveFileModified",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
       "type": "DefenseEvasion:Runtime/ProcessInjection.Proc",
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
@@ -1462,6 +1473,17 @@
       ]
     },
     {
+      "type": "Persistence:Runtime/SensitiveFileModified",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
       "type": "PrivilegeEscalation:Runtime/CGroupsReleaseAgentModified",
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
@@ -1518,6 +1540,17 @@
     },
     {
       "type": "PrivilegeEscalation:Runtime/SuspiciousCommand",
+      "resource_type": "Instance, EKS cluster, ECS cluster, or container",
+      "source": "Runtime Monitoring",
+      "severity": "Medium",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "PrivilegeEscalation:Runtime/SensitiveFileModified",
       "resource_type": "Instance, EKS cluster, ECS cluster, or container",
       "source": "Runtime Monitoring",
       "severity": "Medium",
