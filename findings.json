@@ -1,166 +1,12 @@
 {
   "findings": [
     {
-      "type": "Discovery:S3/AnomalousBehavior",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "Low",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Discovery:S3/MaliciousIPCaller",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Discovery:S3/MaliciousIPCaller.Custom",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Discovery:S3/TorIPCaller",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "Medium",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Exfiltration:S3/AnomalousBehavior",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Exfiltration:S3/MaliciousIPCaller",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Impact:EC2/MaliciousDomainRequest.Custom",
-      "resource_type": "Amazon EC2",
-      "source": "DNS logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Impact:S3/AnomalousBehavior.Delete",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Impact:S3/AnomalousBehavior.Permission",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Impact:S3/AnomalousBehavior.Write",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "Medium",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "Impact:S3/MaliciousIPCaller",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "PenTest:S3/KaliLinux",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "Medium",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "PenTest:S3/ParrotLinux",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "Medium",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "PenTest:S3/PentooLinux",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "Medium",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:S3/TorIPCaller",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:S3/MaliciousIPCaller.Custom",
-      "resource_type": "Amazon S3",
-      "source": "CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "s3"
-      ]
-    },
-    {
       "type": "CredentialAccess:IAMUser/AnomalousBehavior",
       "resource_type": "IAM",
       "source": "CloudTrail management events",
       "severity": "Medium",
       "services": [
         "iam"
-      ]
-    },
-    {
-      "type": "CredentialAccess:IAMUser/CompromisedCredentials",
-      "resource_type": "IAM",
-      "source": "CloudTrail management events or CloudTrail data events for S3",
-      "severity": "High",
-      "services": [
-        "iam",
-        "s3"
       ]
     },
     {
@@ -398,6 +244,16 @@
       ]
     },
     {
+      "type": "CredentialAccess:IAMUser/CompromisedCredentials",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events or CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "iam",
+        "s3"
+      ]
+    },
+    {
       "type": "Policy:IAMUser/RootCredentialUsage",
       "resource_type": "IAM",
       "source": "CloudTrail management events or CloudTrail data events for S3",
@@ -438,47 +294,10 @@
       ]
     },
     {
-      "type": "AttackSequence:EKS/CompromisedCluster",
-      "resource_type": "Resources involved in attack sequence",
-      "source": "EKS audit log eventsRuntime Monitoring for Amazon EKSAmazon EKS malware detection for Amazon EC2AWS CloudTrail data events for S3AWS CloudTrail management eventsVPC Flow LogsRoute53 Resolver DNS query logs",
-      "severity": "Critical",
-      "services": [
-        "ec2",
-        "s3"
-      ]
-    },
-    {
-      "type": "AttackSequence:IAM/CompromisedCredentials",
-      "resource_type": "Resources involved in attack sequence",
-      "source": "CloudTrail management events",
-      "severity": "Critical",
-      "services": [
-        "iam"
-      ]
-    },
-    {
-      "type": "AttackSequence:S3/CompromisedData",
-      "resource_type": "Resources involved in attack sequence",
-      "source": "CloudTrail management events and CloudTrail data events for S3",
-      "severity": "Critical",
-      "services": [
-        "s3"
-      ]
-    },
-    {
-      "type": "AttackSequence:ECS/CompromisedCluster",
-      "resource_type": "Resources involved in attack sequence",
-      "source": "AWS Amazon ECS Runtime detections (Fargate)AWS Amazon ECS Runtime detections (Amazon EC2 Instances)AWS Malware detections",
-      "severity": "Critical",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "AttackSequence:EC2/CompromisedInstanceGroup",
-      "resource_type": "Resources involved in attack sequence",
-      "source": "AWS Amazon EC2 Runtime detectionsAWS Malware detectionsVPC Flow LogsRoute53 Resolver DNS query logs",
-      "severity": "Critical",
+      "type": "Impact:EC2/MaliciousDomainRequest.Custom",
+      "resource_type": "Amazon EC2",
+      "source": "DNS logs",
+      "severity": "Medium",
       "services": [
         "ec2"
       ]
@@ -610,115 +429,301 @@
       ]
     },
     {
-      "type": "Execution:Container/MaliciousFile",
-      "resource_type": "Container",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
+      "type": "Backdoor:EC2/C&CActivity.B",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.Dns",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.Tcp",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.Udp",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.UdpOnTcpPorts",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/DenialOfService.UnusualProtocol",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Backdoor:EC2/Spambot",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Behavior:EC2/NetworkPortUnusual",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Behavior:EC2/TrafficVolumeUnusual",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "CryptoCurrency:EC2/BitcoinTool.B",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:EC2/UnusualDNSResolver",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:EC2/UnusualDoHActivity",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "DefenseEvasion:EC2/UnusualDoTActivity",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/PortSweep",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:EC2/WinRMBruteForce",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Recon:EC2/PortProbeEMRUnprotectedPort",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Recon:EC2/PortProbeUnprotectedPort",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Recon:EC2/Portscan",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/BlackholeTraffic",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Trojan:EC2/DropPoint",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Medium",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/RDPBruteForce",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/SSHBruteForce",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "Low",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/TorClient",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:EC2/TorRelay",
+      "resource_type": "Amazon EC2",
+      "source": "VPC flow logs",
+      "severity": "High",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "AttackSequence:EKS/CompromisedCluster",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "EKS audit log eventsRuntime Monitoring for Amazon EKSAmazon EKS malware detection for Amazon EC2AWS CloudTrail data events for S3AWS CloudTrail management eventsVPC Flow LogsRoute53 Resolver DNS query logs",
+      "severity": "Critical",
       "services": [
         "ec2",
-        "ecs",
-        "eks"
+        "s3"
       ]
     },
     {
-      "type": "Execution:Container/SuspiciousFile",
-      "resource_type": "Container",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
+      "type": "AttackSequence:IAM/CompromisedCredentials",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "CloudTrail management events",
+      "severity": "Critical",
       "services": [
-        "ec2",
-        "ecs",
-        "eks"
+        "iam"
       ]
     },
     {
-      "type": "Execution:EC2/MaliciousFile",
-      "resource_type": "Amazon EC2",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:EC2/SuspiciousFile",
-      "resource_type": "Amazon EC2",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:ECS/MaliciousFile",
-      "resource_type": "ECS",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:ECS/SuspiciousFile",
-      "resource_type": "ECS",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:Kubernetes/MaliciousFile",
-      "resource_type": "Kubernetes",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "eks"
-      ]
-    },
-    {
-      "type": "Execution:Kubernetes/SuspiciousFile",
-      "resource_type": "Kubernetes",
-      "source": "EBS Malware Protection",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "eks"
-      ]
-    },
-    {
-      "type": "Execution:EC2/MaliciousFile!Snapshot",
-      "resource_type": "Amazon EBS",
-      "source": "Malware Protection for Backup",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:EC2/MaliciousFile!AMI",
-      "resource_type": "Amazon EC2",
-      "source": "Malware Protection for Backup",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:EC2/MaliciousFile!RecoveryPoint",
-      "resource_type": "AWS Backup",
-      "source": "Malware Protection for Backup",
-      "severity": "Varies depending on the detected threat",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Execution:S3/MaliciousFile!RecoveryPoint",
-      "resource_type": "AWS Backup",
-      "source": "Malware Protection for Backup",
-      "severity": "Varies depending on the detected threat",
+      "type": "AttackSequence:S3/CompromisedData",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "CloudTrail management events and CloudTrail data events for S3",
+      "severity": "Critical",
       "services": [
         "s3"
+      ]
+    },
+    {
+      "type": "AttackSequence:ECS/CompromisedCluster",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "AWS Amazon ECS Runtime detections (Fargate)AWS Amazon ECS Runtime detections (Amazon EC2 Instances)AWS Malware detections",
+      "severity": "Critical",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "AttackSequence:EC2/CompromisedInstanceGroup",
+      "resource_type": "Resources involved in attack sequence",
+      "source": "AWS Amazon EC2 Runtime detectionsAWS Malware detectionsVPC Flow LogsRoute53 Resolver DNS query logs",
+      "severity": "Critical",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Impact:IAMUser/AnomalousModelInvocation",
+      "resource_type": "IAM",
+      "source": "AI Protection",
+      "severity": "Low",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Impact:IAMUser/CostHarvesting",
+      "resource_type": "IAM",
+      "source": "AI Protection",
+      "severity": "Low",
+      "services": [
+        "iam"
+      ]
+    },
+    {
+      "type": "Impact:IAMUser/PromptInjection.Direct",
+      "resource_type": "IAM",
+      "source": "AI Protection",
+      "severity": "Low",
+      "services": [
+        "iam"
       ]
     },
     {
@@ -1086,6 +1091,118 @@
       ]
     },
     {
+      "type": "Execution:Container/MaliciousFile",
+      "resource_type": "Container",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Container/SuspiciousFile",
+      "resource_type": "Container",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2",
+        "ecs",
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile",
+      "resource_type": "Amazon EC2",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/SuspiciousFile",
+      "resource_type": "Amazon EC2",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:ECS/MaliciousFile",
+      "resource_type": "ECS",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:ECS/SuspiciousFile",
+      "resource_type": "ECS",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/MaliciousFile",
+      "resource_type": "Kubernetes",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:Kubernetes/SuspiciousFile",
+      "resource_type": "Kubernetes",
+      "source": "EBS Malware Protection",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "eks"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!Snapshot",
+      "resource_type": "Amazon EBS",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!AMI",
+      "resource_type": "Amazon EC2",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:EC2/MaliciousFile!RecoveryPoint",
+      "resource_type": "AWS Backup",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "ec2"
+      ]
+    },
+    {
+      "type": "Execution:S3/MaliciousFile!RecoveryPoint",
+      "resource_type": "AWS Backup",
+      "source": "Malware Protection for Backup",
+      "severity": "Varies depending on the detected threat",
+      "services": [
+        "s3"
+      ]
+    },
+    {
       "type": "Object:S3/MaliciousFile",
       "resource_type": "S3Object",
       "source": "Malware Protection for S3",
@@ -1173,6 +1290,141 @@
       "severity": "Medium",
       "services": [
         "rds"
+      ]
+    },
+    {
+      "type": "Discovery:S3/AnomalousBehavior",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Low",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Discovery:S3/MaliciousIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Discovery:S3/MaliciousIPCaller.Custom",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Discovery:S3/TorIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Exfiltration:S3/AnomalousBehavior",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Exfiltration:S3/MaliciousIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/AnomalousBehavior.Delete",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/AnomalousBehavior.Permission",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/AnomalousBehavior.Write",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "Impact:S3/MaliciousIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PenTest:S3/KaliLinux",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PenTest:S3/ParrotLinux",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "PenTest:S3/PentooLinux",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "Medium",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:S3/TorIPCaller",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
+      ]
+    },
+    {
+      "type": "UnauthorizedAccess:S3/MaliciousIPCaller.Custom",
+      "resource_type": "Amazon S3",
+      "source": "CloudTrail data events for S3",
+      "severity": "High",
+      "services": [
+        "s3"
       ]
     },
     {
@@ -1679,231 +1931,6 @@
         "ec2",
         "ecs",
         "eks"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/C&CActivity.B",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/DenialOfService.Dns",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/DenialOfService.Tcp",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/DenialOfService.Udp",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/DenialOfService.UdpOnTcpPorts",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/DenialOfService.UnusualProtocol",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Backdoor:EC2/Spambot",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Behavior:EC2/NetworkPortUnusual",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Behavior:EC2/TrafficVolumeUnusual",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "CryptoCurrency:EC2/BitcoinTool.B",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "DefenseEvasion:EC2/UnusualDNSResolver",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "DefenseEvasion:EC2/UnusualDoHActivity",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "DefenseEvasion:EC2/UnusualDoTActivity",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Impact:EC2/PortSweep",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Impact:EC2/WinRMBruteForce",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Low",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Recon:EC2/PortProbeEMRUnprotectedPort",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Recon:EC2/PortProbeUnprotectedPort",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Low",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Recon:EC2/Portscan",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Trojan:EC2/BlackholeTraffic",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "Trojan:EC2/DropPoint",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Medium",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:EC2/RDPBruteForce",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Low",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:EC2/SSHBruteForce",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "Low",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:EC2/TorClient",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
-      ]
-    },
-    {
-      "type": "UnauthorizedAccess:EC2/TorRelay",
-      "resource_type": "Amazon EC2",
-      "source": "VPC flow logs",
-      "severity": "High",
-      "services": [
-        "ec2"
       ]
     }
   ]
