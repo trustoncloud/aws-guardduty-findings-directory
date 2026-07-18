@@ -284,6 +284,15 @@
       ]
     },
     {
+      "type": "UnauthorizedAccess:IAMUser/ResourceCredentialExfiltration.InsideAWS",
+      "resource_type": "IAM",
+      "source": "CloudTrail management events",
+      "severity": "High",
+      "services": [
+        "iam"
+      ]
+    },
+    {
       "type": "UnauthorizedAccess:IAMUser/ResourceCredentialExfiltration.OutsideAWS",
       "resource_type": "IAM",
       "source": "CloudTrail management events or CloudTrail data events for S3",
